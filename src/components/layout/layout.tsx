@@ -12,7 +12,7 @@ import ExitToAppTwoToneIcon from "@material-ui/icons/ExitToAppTwoTone";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme, Theme, createStyles } from "@material-ui/core/styles";
 import { Box, Divider } from "@material-ui/core";
-import { blue, deepPurple, lime, red, teal, yellow } from "@material-ui/core/colors";
+import { blue, deepPurple, lime, red, teal } from "@material-ui/core/colors";
 
 // import logo from "../../../public/images/logo.png";
 

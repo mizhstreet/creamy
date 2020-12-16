@@ -1,5 +1,5 @@
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
-import { blue, brown, green, grey, orange, pink, purple, yellow } from "@material-ui/core/colors";
+import { grey, pink, purple } from "@material-ui/core/colors";
 import React from "react";
 
 const useStyles = makeStyles({
