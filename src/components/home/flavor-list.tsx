@@ -22,7 +22,7 @@ const FlavorList: React.FC = () => {
     <Box paddingTop={1}>
       <Grid container>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={green[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={green[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/2.png"} />
             </Box>
@@ -32,7 +32,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/1.png"} />
             </Box>
@@ -42,7 +42,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={purple[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={purple[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/3.png"} />
             </Box>
@@ -52,7 +52,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={yellow[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={yellow[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/6.png"} />
             </Box>
@@ -62,7 +62,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={orange[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={orange[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/4.png"} />
             </Box>
@@ -72,7 +72,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/5.png"} />
             </Box>
@@ -85,7 +85,7 @@ const FlavorList: React.FC = () => {
       <br />
       <Grid container>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={yellow[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={yellow[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/6.png"} />
             </Box>
@@ -95,7 +95,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={orange[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={orange[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/4.png"} />
             </Box>
@@ -105,7 +105,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={green[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={green[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/2.png"} />
             </Box>
@@ -115,7 +115,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/1.png"} />
             </Box>
@@ -125,7 +125,7 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={purple[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={purple[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/3.png"} />
             </Box>
@@ -136,7 +136,7 @@ const FlavorList: React.FC = () => {
         </Grid>
 
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[100]}>
+          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[200]}>
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/5.png"} />
             </Box>

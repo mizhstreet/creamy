@@ -21,6 +21,7 @@ const useStyles = makeStyles({
   },
   itemTotal: {
     fontWeight: "bold",
+    color: grey[600],
   },
 });
 

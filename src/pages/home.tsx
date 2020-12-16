@@ -1,5 +1,5 @@
-import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
-import { grey } from "@material-ui/core/colors";
+import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
+import { grey, red } from "@material-ui/core/colors";
 import React from "react";
 import { CategoryList } from "../components/home/category-list";
 import { FlavorList } from "../components/home/flavor-list";
@@ -24,13 +24,26 @@ const useStyles = makeStyles({
     color: grey[400],
     textAlign: "center",
   },
+  checkoutBtn: {
+    marginTop: 60,
+    paddingTop: 20,
+    paddingBottom: 20,
+    borderRadius: 30,
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 20,
+    backgroundColor: red[300],
+    "&:hover": {
+      backgroundColor: red[300],
+    },
+  },
 });
 
 const Home: React.FC = () => {
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid style={{ height: 1000, backgroundColor: grey[200] }} item md={8}>
+      <Grid style={{ backgroundColor: grey[200] }} item md={8}>
         <Box width={1} pl={5} pr={5}>
           <Typography component={"h1"} className={classes.heading}>
             サイズ
@@ -47,11 +60,15 @@ const Home: React.FC = () => {
           <Typography component={"h1"} className={classes.heading}>
             注文
           </Typography>
-          {/* <Order /> */}
+          <Order />
           <Box>
             <img className={classes.emptyImg} src="images/no.png" />
           </Box>
           <Typography className={classes.emptyText}>何も入っていない</Typography>
+
+          <Button variant="contained" fullWidth={true} classes={{ contained: classes.checkoutBtn }}>
+            レシートへ
+          </Button>
         </Box>
       </Grid>
     </Grid>

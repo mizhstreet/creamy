@@ -8,10 +8,11 @@ import CreditCardTwoToneIcon from "@material-ui/icons/CreditCardTwoTone";
 import ListAltTwoToneIcon from "@material-ui/icons/ListAltTwoTone";
 import WhatshotTwoToneIcon from "@material-ui/icons/WhatshotTwoTone";
 import SearchTwoToneIcon from "@material-ui/icons/SearchTwoTone";
+import ExitToAppTwoToneIcon from "@material-ui/icons/ExitToAppTwoTone";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme, Theme, createStyles } from "@material-ui/core/styles";
-import { Box } from "@material-ui/core";
-import { red } from "@material-ui/core/colors";
+import { Box, Divider } from "@material-ui/core";
+import { blue, deepPurple, lime, red, teal, yellow } from "@material-ui/core/colors";
 
 // import logo from "../../../public/images/logo.png";
 
@@ -19,6 +20,10 @@ const drawerWidth = 120;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    avatar: {
+      width: "100%",
+      display: "block",
+    },
     root: {
       display: "flex",
     },
@@ -56,6 +61,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     navItemText: {
       fontSize: 14,
+      marginTop: 5,
       fontWeight: "bold",
       // color: red[800],
     },
@@ -102,27 +108,53 @@ export const Layout: React.FC<Props> = (props) => {
       </Box>
       <List>
         <ListItem className={classes.navListItem} button>
-          <Box width={1} display="flex" pt={2} pb={2} flexDirection="column" alignItems="center" bgcolor={red[100]}>
-            <CreditCardTwoToneIcon className={classes.icon} />
-            <Typography className={classes.navItemText}>レジ</Typography>
+          <Box width={1} display="flex" pt={2} pb={2} flexDirection="column" alignItems="center" bgcolor={blue[100]}>
+            <CreditCardTwoToneIcon style={{ color: blue[800] }} className={classes.icon} />
+            <Typography style={{ color: blue[800] }} className={classes.navItemText}>
+              レジ
+            </Typography>
           </Box>
         </ListItem>
         <ListItem className={classes.navListItem} button>
           <Box width={1} display="flex" pt={2} pb={2} flexDirection="column" alignItems="center">
-            <ListAltTwoToneIcon className={classes.icon} />
-            <Typography className={classes.navItemText}>レシート</Typography>
+            <ListAltTwoToneIcon style={{ color: teal[800] }} className={classes.icon} />
+            <Typography style={{ color: teal[800] }} className={classes.navItemText}>
+              レシート
+            </Typography>
           </Box>
         </ListItem>
         <ListItem className={classes.navListItem} button>
           <Box width={1} display="flex" pt={2} pb={2} flexDirection="column" alignItems="center">
-            <WhatshotTwoToneIcon className={classes.icon} />
-            <Typography className={classes.navItemText}>人気</Typography>
+            <WhatshotTwoToneIcon style={{ color: lime[800] }} className={classes.icon} />
+            <Typography style={{ color: lime[800] }} className={classes.navItemText}>
+              人気
+            </Typography>
           </Box>
         </ListItem>
         <ListItem className={classes.navListItem} button>
           <Box width={1} display="flex" pt={2} pb={2} flexDirection="column" alignItems="center">
-            <SearchTwoToneIcon className={classes.icon} />
-            <Typography className={classes.navItemText}>検索</Typography>
+            <SearchTwoToneIcon style={{ color: deepPurple[800] }} className={classes.icon} />
+            <Typography style={{ color: deepPurple[800] }} className={classes.navItemText}>
+              検索
+            </Typography>
+          </Box>
+        </ListItem>
+        <Box height={"100%"}></Box>
+        <Divider />
+        <ListItem className={classes.navListItem} button>
+          <Box width={1} display="flex" pt={2} flexDirection="column" alignItems="center">
+            <Box maxWidth={60} borderRadius={50} overflow={"hidden"}>
+              <img className={classes.avatar} src="images/zayn.jpg" alt="" />
+            </Box>
+            <Typography className={classes.navItemText}>mizhB</Typography>
+          </Box>
+        </ListItem>
+        <ListItem className={classes.navListItem} button>
+          <Box width={1} display="flex" pt={2} pb={2} flexDirection="column" alignItems="center">
+            <ExitToAppTwoToneIcon style={{ color: red[800] }} className={classes.icon} />
+            <Typography style={{ color: red[800] }} className={classes.navItemText}>
+              ログアウト
+            </Typography>
           </Box>
         </ListItem>
       </List>
