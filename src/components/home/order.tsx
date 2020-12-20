@@ -54,8 +54,13 @@ const Order: React.FC = () => {
               <img className={classes.img} src="images/flavors/1.png" alt="" />
             </Box>
             <Box pl={2}>
-              <Typography className={classes.name}>シングル</Typography>
+              <Typography className={classes.name}>トリプル</Typography>
               <Typography className={classes.flavor}>大納言あずき</Typography>
+              <Typography style={{ color: pink[400] }} className={classes.flavor}>
+                大納言あずき
+              </Typography>
+              <Typography className={classes.flavor}>大納言あずき</Typography>
+              <Typography className={classes.flavor}>ショコラモンブラン</Typography>
               <Typography style={{ color: grey[400] }} className={classes.flavor}>
                 100円
               </Typography>

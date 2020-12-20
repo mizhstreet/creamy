@@ -4,10 +4,6 @@ import { fieldToTextField, TextFieldProps } from "formik-material-ui";
 import { FormControl, makeStyles } from "@material-ui/core";
 import { grey } from "@material-ui/core/colors";
 
-interface IProps {
-  labelname: string;
-}
-
 const useStyles = makeStyles({
   inputField: {
     padding: 15,
@@ -39,13 +35,12 @@ const useStyles = makeStyles({
   },
 });
 
-const OutlinedTextfield: React.FC<TextFieldProps & IProps> = (props) => {
+const OutlinedTextfield: React.FC<TextFieldProps> = (props) => {
   const classes = useStyles();
-  const { labelname, ...rest } = props;
   return (
     <FormControl className={classes.fieldContainer}>
       <MuiTextField
-        {...fieldToTextField(rest)}
+        {...fieldToTextField(props)}
         fullWidth={true}
         variant="outlined"
         className={classes.root}

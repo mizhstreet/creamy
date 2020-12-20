@@ -1,6 +1,7 @@
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import { brown, green, orange, purple, yellow } from "@material-ui/core/colors";
 import React from "react";
+import { Overlay } from "./overlay";
 
 const useStyles = makeStyles({
   img: {
@@ -32,7 +33,8 @@ const FlavorList: React.FC = () => {
           </Box>
         </Grid>
         <Grid item md={2}>
-          <Box padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[200]}>
+          <Box position="relative" padding={1} margin="auto" width={"75%"} borderRadius={10} bgcolor={brown[200]}>
+            <Overlay />
             <Box width={1} borderRadius={10}>
               <img className={classes.img} src={"/images/flavors/1.png"} />
             </Box>

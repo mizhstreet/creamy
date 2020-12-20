@@ -2,9 +2,11 @@ import { Box, Button, Divider, Grid, makeStyles, Typography } from "@material-ui
 import { grey, red } from "@material-ui/core/colors";
 import { Field, Form, Formik } from "formik";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { OutlinedTextfield } from "../components/form/outlined-textfield";
 import { CategoryList } from "../components/home/category-list";
 import { FlavorList } from "../components/home/flavor-list";
+import { OptionList } from "../components/home/option-list";
 import { Order } from "../components/home/order";
 import { SectionTitle } from "../components/typography/section-title";
 import { SubSectionTitle } from "../components/typography/sub-section-title";
@@ -53,19 +55,32 @@ const useStyles = makeStyles({
       backgroundColor: red[100],
     },
   },
+  fee: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: grey[500],
+  },
 });
 
 const Home: React.FC = () => {
+  const history = useHistory();
+  const classes = useStyles();
+
   const initialValues: IValues = {
     amount: 0,
   };
-  const classes = useStyles();
+
+  function handleClick() {
+    history.push("/receipt");
+  }
   return (
     <Grid container>
       <Grid style={{ backgroundColor: grey[100] }} item md={8}>
         <Box width={1} pl={5} pr={5}>
           <SectionTitle component={"h2"}>サイズ</SectionTitle>
           <CategoryList />
+          <SectionTitle component={"h2"}>容器</SectionTitle>
+          <OptionList />
           <SectionTitle component={"h2"}>フレーバ</SectionTitle>
           <FlavorList />
         </Box>
@@ -83,17 +98,7 @@ const Home: React.FC = () => {
               setSubmitting(true);
             }}
           >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              isSubmitting,
-              submitForm,
-              /* and other goodies */
-            }) => (
+            {() => (
               <Form>
                 <Box width={1} display="flex">
                   <Box width={"75%"}>
@@ -110,14 +115,40 @@ const Home: React.FC = () => {
           </Formik>
 
           <Divider />
+          <Box width={1}>
+            <Box component="ul" p={0} width={1}>
+              <Box component="li" pt={1} display="flex" justifyContent="space-between">
+                <Typography style={{ color: grey[600], fontSize: 30 }} className={classes.fee}>
+                  合計
+                </Typography>
+                <Typography style={{ color: grey[600], fontSize: 30 }} className={classes.fee}>
+                  1000円
+                </Typography>
+              </Box>
+              <Box component="li" pt={1} display="flex" justifyContent="space-between">
+                <Typography className={classes.fee}>受取金額</Typography>
+                <Typography className={classes.fee}>2000円</Typography>
+              </Box>
+              <Box component="li" pt={1} display="flex" justifyContent="space-between">
+                <Typography className={classes.fee}>お釣り</Typography>
+                <Typography className={classes.fee}>1000円</Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Button
+            onClick={handleClick}
+            variant="contained"
+            fullWidth={true}
+            classes={{ contained: classes.checkoutBtn }}
+          >
+            レシートへ
+          </Button>
           {/* <Box>
             <img className={classes.emptyImg} src="images/no.png" />
           </Box>
           <Typography className={classes.emptyText}>何も入っていない</Typography>
 
-          <Button variant="contained" fullWidth={true} classes={{ contained: classes.checkoutBtn }}>
-            レシートへ
-          </Button> */}
+          */}
         </Box>
       </Grid>
     </Grid>
