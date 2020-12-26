@@ -104,7 +104,7 @@ export const Layout: React.FC<Props> = (props) => {
   const drawer = (
     <div>
       <Box pt={2} pb={3}>
-        <img className={classes.logo} src={"images/logo1.png"} alt="some" />
+        <img className={classes.logo} src={"/images/logo1.png"} alt="some" />
       </Box>
       <List>
         <ListItem className={classes.navListItem} button>
@@ -144,7 +144,7 @@ export const Layout: React.FC<Props> = (props) => {
         <ListItem className={classes.navListItem} button>
           <Box width={1} display="flex" pt={2} flexDirection="column" alignItems="center">
             <Box maxWidth={60} borderRadius={50} overflow={"hidden"}>
-              <img className={classes.avatar} src="images/zayn.jpg" alt="" />
+              <img className={classes.avatar} src="/images/zayn.jpg" alt="" />
             </Box>
             <Typography className={classes.navItemText}>mizhB</Typography>
           </Box>

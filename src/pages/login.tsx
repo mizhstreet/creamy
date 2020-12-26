@@ -28,30 +28,6 @@ const useStyles = makeStyles({
   coloredGreeting: {
     color: blue[800],
   },
-  emptyImg: {
-    maxWidth: "60%",
-    margin: "0 auto",
-    display: "block",
-  },
-  emptyText: {
-    fontWeight: "bold",
-    fontSize: 40,
-    color: grey[400],
-    textAlign: "center",
-  },
-  checkoutBtn: {
-    marginTop: 60,
-    paddingTop: 20,
-    paddingBottom: 20,
-    borderRadius: 30,
-    color: "white",
-    fontWeight: "bold",
-    fontSize: 20,
-    backgroundColor: red[300],
-    "&:hover": {
-      backgroundColor: red[300],
-    },
-  },
   applyBtn: {
     marginTop: 30,
     paddingTop: 10,
